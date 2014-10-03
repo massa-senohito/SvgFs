@@ -15,6 +15,8 @@ module Inputter=
       mutable EyeLeft :bool
 
     }
+  let mutable mouseX=0;
+  let mutable mouseY=0;
   let State=
     {
       Deside=false
@@ -48,6 +50,9 @@ module Inputter=
 
   let Poll()=
     let keystate=Keyboard.GetState()
+    let mouse=Mouse.GetState()
+    mouseX<- mouse.X
+    mouseY<- mouse.Y
     let keyd=keystate.IsKeyDown
     State.Deside<-keyd(Key.Space)
     State.Cansel<-keyd(Key.Escape)

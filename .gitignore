@@ -1,4 +1,8 @@
 *~
+*.htm
+*.svg
+WpfControlLibrary1
+Backup
 *.swp
 *.swo
 *.sdf
